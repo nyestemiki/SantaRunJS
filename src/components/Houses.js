@@ -1,23 +1,22 @@
 import React from 'react';
-import HousesStyle from './styles/HousesStyles';
+import styled from 'styled-components';
 import House from './House';
 
-export default class Houses extends React.Component {
-    render() {
-        return (
-            <HousesStyle>
-                <House nr="1"/>
-                <House nr="1"/>
-                <House nr="1"/>
-                <House nr="1"/>
-                <House nr="1"/>
-                <House nr="1"/>
-                <House nr="1"/>
-                <House nr="1"/>
-                <House nr="1"/>
-                <House nr="1"/>
-                <House nr="1"/>
-            </HousesStyle>
-        );
-    }
-}
+const HousesStyle = styled.div`
+    position: absolute;
+    bottom: 3vh;
+    left: 0;
+    display: flex;
+    width: 100%;
+`;
+
+const Houses = () => (
+    <HousesStyle>
+        <House/>
+        <House/>
+        <House/>
+        <House/>
+    </HousesStyle>
+);
+
+export default Houses;

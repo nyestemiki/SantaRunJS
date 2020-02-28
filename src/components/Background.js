@@ -1,15 +1,21 @@
 import React from 'react';
-import BackgroundStyle from './styles/BackgroundStyles';
+import styled from 'styled-components';
 import BackgroundBlock from './BackgroundBlock';
 
-export default class Background extends React.Component {
+const BackgroundStyle = styled.div`
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+`;
 
-    render() {
-        return (
-            <BackgroundStyle>
-                <BackgroundBlock/>
-                <BackgroundBlock/>
-            </BackgroundStyle>
-        );
-    }
-}
+const Background = ()  => (
+    <BackgroundStyle>
+        <BackgroundBlock/>
+        <BackgroundBlock/>
+    </BackgroundStyle>
+);
+
+export default Background;

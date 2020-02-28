@@ -1,16 +1,31 @@
 import React from 'react';
-import HouseStyle from './styles/HouseStyles';
+import styled, { keyframes } from 'styled-components';
 
-export default class House extends React.Component {
-    state = {
-        house: "/img/Houses/House"+this.props.nr+".png"
+const houseAnimation = keyframes`
+    from {
+        transform: translateX(0%);
+    } 
+    to {
+        transform: translateX(-100%);
     }
-    
-    render() {
-        return (
-            <HouseStyle>
-                <img alt="House" src={this.state.house}/>
-            </HouseStyle>
-        );
+`;
+
+const HouseStyle = styled.div`
+    animation: ${houseAnimation} 1.2s linear infinite;
+    position: relative;
+    width: 50vw;
+    padding-right: 15vw;
+    padding-left: 15vw;
+
+    & > img {
+        height: 35vh;
     }
-}
+`;
+
+const House = () => (
+    <HouseStyle>
+        <img alt="House" src="/img/Houses/House1.png"/>
+    </HouseStyle>
+);
+
+export default House;
