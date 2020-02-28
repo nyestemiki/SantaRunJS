@@ -24,7 +24,7 @@ const HouseStyle = styled.div`
 
 const House = () => (
     <HouseStyle>
-        <img alt="House" src="/img/Houses/House1.png"/>
+        <img alt="House" src="/img/Houses/House1.png" className="house_object"/>
     </HouseStyle>
 );
 

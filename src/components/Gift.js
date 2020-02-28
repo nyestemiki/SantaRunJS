@@ -33,14 +33,12 @@ const GiftStyle = styled.div`
     }
 `;
 
-export default class Gift extends React.Component {
-    render() {
-        return (
-            <GiftContainer>
-                <GiftStyle throwing={this.props.throwing} className="gift_object">
-                    <img alt="Gift" src="/img/Gifts/Gift1.png"/>
-                </GiftStyle>
-            </GiftContainer>
-        );
-    }
-}
+const Gift = props => (
+    <GiftContainer>
+        <GiftStyle throwing={props.throwing} className="gift_object">
+            <img alt="Gift" src="/img/Gifts/Gift1.png"/>
+        </GiftStyle>
+    </GiftContainer>
+);
+
+export default Gift;
