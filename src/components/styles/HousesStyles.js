@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-const PavementStyle = styled.div`
+const HousesStyle = styled.div`
     position: absolute;
-    bottom: 0;
+    bottom: 3vh;
     left: 0;
     display: flex;
-    height: 6.5vh;
+    width: 100%;
 `;
 
-export default PavementStyle;
+export default HousesStyle;

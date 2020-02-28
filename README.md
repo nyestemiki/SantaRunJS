@@ -1,7 +1,6 @@
 ### React version of the Unity app SantaRun
 
 ### TODO
-- pavement
 - houses spawn randomly
 - santa (+ animation)
     - onclick: throw gift --> animate gift (translateX)
